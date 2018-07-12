@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Page Title</title>
+
+  <script>
+    function vse() {
+      printVopros()
+      oracul ()
+    }
+
+    function printVopros() {
+      alert("Оракул думает");
+      var vop = document.getElementById('vopros').value
+      console.log (vop)
+      document.getElementById('demo').innerHTML = vop
+    }
+    
+    function oracul() {
+  var words = [ 
+      'Совершенно точно', 
+      'Определенно',
+      'Несомненно',
+      'Да',
+      'Можно на это смело рассчитывать',
+      'Как мне кажется, да',
+      'Скорее всего',
+      'Прогноз положительный',
+      'По всем признакам - да', 
+      'Ответ как-то мутно выглядит, попробуй еще',
+      'Попробуй позже', 
+      'Тебе сейчас лучше об этом не знать',
+      'Невозможно сейчас сказать что-то определенное',
+      'Сосредоточься и спроси меня опять',
+      'Я бы не стала на это рассчитывать', 
+      'Мой ответ - нет',
+      'Мои источники все отрицают',
+      'Прогноз выглядит неутешительно',
+      'Сомнительно',
+      'Не мучай меня своими скучными вопросами, пожалуйста'
+      ];
+  var lags = words.length
+console.log (lags)
+
+var one = Math.random () 
+console.log(one)
+
+var two = lags*one 
+console.log(two)
+
+var g = Math.floor(two)
+console.log(g)
+
+var resul = words[g]
+console.log(resul)
+document.getElementById('otvet').innerHTML = resul
+}
+
+
+  </script>
+  <style>
+    #demo {
+      height: 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="demo"> </div>
+  <div id="otvet" style="height: 30px"> </div>
+
+  <img src="img/22.jpg" onmouseleave="oracul()" alt=""><br>
+  <input id="vopros"> 
+  <button onclick="vse()">Задать вопрос оракулу</button>
+
+</body>
+</html>
